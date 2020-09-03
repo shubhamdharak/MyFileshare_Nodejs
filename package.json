@@ -1,0 +1,20 @@
+{
+  "name": "myfile_share",
+  "version": "1.0.0",
+  "description": "File Sharing Webapp",
+  "main": "server",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Shubham Dharak",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^8.2.0",
+    "ejs": "^3.1.5",
+    "express": "^4.17.1",
+    "mongoose": "^5.10.2",
+    "multer": "^1.4.2",
+    "nodemailer": "^6.4.11",
+    "uuid": "^8.3.0"
+  }
+}
