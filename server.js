@@ -3,12 +3,14 @@ const app = express()
 const path = require('path')
 const port = process.env.PORT || 3000
 require('./initDB')
+const core = require('cors');
 
 app.set('views', path.join(__dirname, '/views'));
 app.set('view engine', 'ejs');
 
 app.use(express.static('public'));
 app.use(express.json());
+app.use(core());
 
 //Routes
 app.use('/api/files', require('./routes/files'));
