@@ -13,6 +13,9 @@ app.use(express.json());
 app.use(core());
 
 //Routes
+app.get('/', (req,res)=> {
+    res.render('index.ejs')
+});
 app.use('/api/files', require('./routes/files'));
 app.use('/files', require('./routes/show'));
 app.use('/files/download', require('./routes/download'))
