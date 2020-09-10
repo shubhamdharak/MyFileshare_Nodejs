@@ -27,7 +27,7 @@ app.use('/files/download', require('./routes/download'))
 
 app.listen(port, ()=> {
      setInterval(async()=> {
-        const files =  await File.find({ createdAt : { $lt: new Date(Date.now() - 60 * 1000)} })
+        const files =  await File.find({ createdAt : { $lt: new Date(Date.now() - 24 * 60 * 60 * 1000)} })
             if(files.length) {
                 for (const file of files) {
                     try {
@@ -40,7 +40,7 @@ app.listen(port, ()=> {
                 }
             }
             console.log('Job done!');
-    }, 2 * 60 * 1000);
+    }, 24 * 60 * 60 * 1000);
         
             // deleteFile().then(process.exit);
     
